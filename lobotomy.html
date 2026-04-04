@@ -20,9 +20,24 @@
             90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
+body {
+    animation: colorCycle 1.6s infinite; /* 4 цвета по 0.4 сек каждый = 1.6 сек */
+}
+
+@keyframes colorCycle {
+    0%   { background-color: red; }
+    25%  { background-color: blue; }
+    50%  { background-color: green; }
+    75%  { background-color: yellow; }
+    100% { background-color: red; }
+}
   </style>
+<body>
+<center>
 <!-- gif 1 -->
 <img src="https://i.pinimg.com/originals/ca/11/83/ca11834efdbe6818dd43e97153f51aff.gif" class ="permanent-shake">
 <br>
 <!-- gif 2 -->
 <img src="https://img1.picmix.com/output/stamp/normal/6/2/9/7/1807926_d2975.gif" class ="permanent-shake">
+</center>
+</body>
