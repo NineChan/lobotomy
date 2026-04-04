@@ -1,7 +1,7 @@
 // ох ёмаё, обогащённый уран?!?!
 let gif1 = document.getElementById('gggggg');
 let gif2 = document.getElementById('ddddd');
-let rand = Math.random() * 360;
+let random = Math.random() * 360;
 
 gif1.addEventListener('click', (event) => {
     for (let i = 0; i < 1488; i++) {
