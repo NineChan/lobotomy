@@ -8,9 +8,8 @@
     <link rel="icon" type="image/png" href="src/images/favicon.png">
 
     <style>
-        /* Стили для анимации тряски */
         .shake-effect {
-            display: inline-block; /* Нужно для корректной работы transform */
+            display: inline-block; 
             animation: shake-anim 0.2s ease-in-out infinite;
         }
 
@@ -22,21 +21,16 @@
             100% { transform: translate(5px, 5px) rotate(1deg); }
         }
 
-        /* Чтобы курсор менялся при наведении */
         h1, img { cursor: pointer; }
     </style>
 </head>
 <body>
 
 <center>
-    <!-- Добавил ID и текст в заголовок -->
     <h1 id="main-title" style="color: red; font-size: 3rem;">
         LOBOTOMY UNLEASHER ONLINE
     </h1>
-    
     <br>
-
-    <!-- Добавил событие клика на картинку -->
     <img src="tong.png" 
          onclick="startLobotomy()" 
          style="width: 400px; height: 400px;" 
@@ -46,17 +40,11 @@
 <script>
     function startLobotomy() {
         const title = document.getElementById('main-title');
-        
-        // Добавляем класс тряски
         title.classList.add('shake-effect');
-        
-        // Убираем тряску через 1.5 секунды
         setTimeout(() => {
             title.classList.remove('shake-effect');
         }, 1500);
     }
-
-    // Также запускаем при клике на сам заголовок
     document.getElementById('main-title').onclick = startLobotomy;
 </script>
 
