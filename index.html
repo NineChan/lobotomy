@@ -4,49 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOBOTOMY UNLEASHER ONLINE</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="src/images/favicon.png">
-
+    
     <style>
-        .shake-effect {
-            display: inline-block; 
-            animation: shake-anim 0.2s ease-in-out infinite;
+        .permanent-shake {
+            display: inline-block;
+            animation: lobotomy-vibe 0.15s infinite; 
+            color: red;
+            font-size: 3rem;
+            font-family: sans-serif;
+            text-shadow: 2px 2px 5px black;
         }
-
-        @keyframes shake-anim {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(-5px, 5px) rotate(-1deg); }
-            50% { transform: translate(5px, -5px) rotate(1deg); }
-            75% { transform: translate(-5px, -5px) rotate(-1deg); }
-            100% { transform: translate(5px, 5px) rotate(1deg); }
+        @keyframes lobotomy-vibe {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
-
-        h1, img { cursor: pointer; }
+        body {
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-
-<center>
-    <h1 id="main-title" style="color: red; font-size: 3rem;">
-        LOBOTOMY UNLEASHER ONLINE
-    </h1>
-    <br>
-    <img src="tong.png" 
-         onclick="startLobotomy()" 
-         style="width: 400px; height: 400px;" 
-         alt="tong">
-</center>
-
-<script>
-    function startLobotomy() {
-        const title = document.getElementById('main-title');
-        title.classList.add('shake-effect');
-        setTimeout(() => {
-            title.classList.remove('shake-effect');
-        }, 1500);
-    }
-    document.getElementById('main-title').onclick = startLobotomy;
-</script>
-
+    <h1 class="permanent-shake">LOBOTOMY UNLEASHER ONLINE</h1>
+    <img src="tong.png" style="width: 400px; height: 400px;" alt="tong">
 </body>
 </html>
